@@ -1,0 +1,107 @@
+{
+  "synthetic": true,
+  "headers": [
+    "编号",
+    "名称",
+    "数量",
+    "状态",
+    "备注"
+  ],
+  "keyColumn": "编号",
+  "comparedColumns": [
+    "名称",
+    "数量",
+    "状态"
+  ],
+  "unselectedColumns": [
+    "备注"
+  ],
+  "summary": {
+    "matchedPairs": 4,
+    "unchangedPairs": 1,
+    "changedPairs": 3,
+    "differenceCells": 3,
+    "leftOnly": 2,
+    "rightOnly": 2,
+    "leftUnable": 3,
+    "rightUnable": 2
+  },
+  "matchedKeys": [
+    "001",
+    "002",
+    "004",
+    "007"
+  ],
+  "unchangedKeys": [
+    "002"
+  ],
+  "leftOnlyKeys": [
+    "003",
+    "010"
+  ],
+  "rightOnlyKeys": [
+    "006",
+    "10"
+  ],
+  "differences": [
+    {
+      "key": "001",
+      "leftRecordNumber": 2,
+      "rightRecordNumber": 2,
+      "leftColumn": "数量",
+      "rightColumn": "数量",
+      "leftValue": "10",
+      "rightValue": "12"
+    },
+    {
+      "key": "004",
+      "leftRecordNumber": 5,
+      "rightRecordNumber": 4,
+      "leftColumn": "状态",
+      "rightColumn": "状态",
+      "leftValue": "在售",
+      "rightValue": "下架"
+    },
+    {
+      "key": "007",
+      "leftRecordNumber": 10,
+      "rightRecordNumber": 9,
+      "leftColumn": "数量",
+      "rightColumn": "数量",
+      "leftValue": "10",
+      "rightValue": "10.0"
+    }
+  ],
+  "unable": [
+    {
+      "side": "left",
+      "recordNumber": 8,
+      "reason": "empty-key",
+      "key": ""
+    },
+    {
+      "side": "right",
+      "recordNumber": 6,
+      "reason": "empty-key",
+      "key": ""
+    },
+    {
+      "side": "left",
+      "recordNumber": 6,
+      "reason": "duplicate-key",
+      "key": "005"
+    },
+    {
+      "side": "left",
+      "recordNumber": 7,
+      "reason": "duplicate-key",
+      "key": "005"
+    },
+    {
+      "side": "right",
+      "recordNumber": 5,
+      "reason": "other-side-duplicate",
+      "key": "005"
+    }
+  ]
+}

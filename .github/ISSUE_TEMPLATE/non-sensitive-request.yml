@@ -1,0 +1,42 @@
+name: 非敏感需求概述
+description: 只收文件大致规模、匹配字段名称和对比目标；禁止表格、真实数据或支付凭据。
+title: "[需求概述] CSV 双表核对"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 这是公开 Issue，所有人都可能看到
+        **不得上传真实表格、数据行、实际编号、个人信息、联系方式、客户身份、商业机密、账号秘密、支付账号或支付凭据。不要在这里付款。**
+        只填大致规模、字段名称及对比目标。先确认范围和交付安排，付款渠道另行确认；真实文件的交付方式尚未建立。
+        表单不能自动拦截所有敏感内容，请提交前自行检查。
+  - type: checkboxes
+    id: privacy_confirmation
+    attributes:
+      label: 公开提交前确认
+      options:
+        - label: 我确认不提交真实数据、个人信息、机密、联系方式或支付凭据，只描述非敏感需求概述。
+          required: true
+  - type: input
+    id: approximate_size
+    attributes:
+      label: 两份文件的大致规模
+      description: 仅写约多少行、多少列、每份多大及编码；不要填真实数据。
+      placeholder: 例如：每份约300行、12列、100KB，UTF-8 CSV
+    validations:
+      required: true
+  - type: input
+    id: matching_fields
+    attributes:
+      label: 拟匹配的字段名称
+      description: 只填两表字段名称，不要填写真实编号、字段值或客户身份。
+      placeholder: 例如：旧表“编号”对应新表“编号”
+    validations:
+      required: true
+  - type: input
+    id: comparison_goal
+    attributes:
+      label: 对比列与目标概述
+      description: 仅概述想比较哪些列、识别哪些变化，不要粘贴表格内容。
+      placeholder: 例如：比较名称、数量、状态，列出新增/缺失/文本值变化
+    validations:
+      required: true
